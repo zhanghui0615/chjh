@@ -1,0 +1,59 @@
+<!--pages/category/index.wxml-->
+<view>
+  <!-- 搜索 -->
+  <view class="homess">
+    <input placeholder="搜索商品" bindconfirm="seek"></input>
+    <image src="../../img/WechatIMG53.png"></image>
+  </view>
+  <view class="content">
+    <!-- 左侧导航 -->
+    <scroll-view scroll-y="true" style="height:{{height}}px" class="categoryNavLeft">
+      <view wx:for="{{types}}" wx:key="typeId" data-type="{{item}}" bindtap="tapType" class="{{item.id == currType ? 'active' : ''}} categoryNavLeftView">
+        {{item.name}}
+      </view>
+    </scroll-view>
+    <!-- 右侧商品 -->
+    <view class="commodity">
+    <!-- 排序 -->
+      <view class="taxis">
+        <view bindtap="synthesize" class="{{synthesizeData?'taxisColor':''}}">
+          <view>综合</view>
+          <view>
+          </view>
+          
+        </view>
+        <view bindtap="price" class="{{priceData?'taxisColor':''}}">
+          <view>价格</view>
+          <view>
+            <image src="../../img/wus.jpg" wx:if='{{!priceData}}'></image>
+            <image src="../../img/tops.jpg" wx:if='{{top == 1}}'></image>
+            <image src="../../img/bottoms.jpg" wx:if='{{top == 2}}'></image>
+          </view>
+          
+        </view>
+        <view bindtap="volume" class="{{volumeData?'taxisColor':''}}">
+          <view>销量</view>
+          <view>
+          </view>
+          
+        </view>
+      </view>
+      <!-- 商品 -->
+      <scroll-view scroll-y="true" style="height: 100%;">
+      <view class="categoryNavRight">
+        <view wx:for='{{typesContent}}' bindtap="productDetails" data-data='{{item}}'>
+          <image class="popularContentImg" src="{{urls}}{{item.images[0]}}"></image>
+          <view class="popularNumber">{{item.name}}</view>
+          <view>
+            <view class="popularDetails">
+              <view>¥<text style="font-size:40rpx;vertical-align:bottom;">{{item.price}}</text></view>
+              <text wx:if='{{item.switch_score == 0  }}'>{{item.score}}积分</text>
+              <image src="../../img/WechatIMG439.png"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

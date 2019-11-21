@@ -1,0 +1,69 @@
+<view>
+  <view style="background:white;">
+    <view class="name">{{name}}</view>
+    <view class="doms">
+      <view class="domsTop">
+        <view style="background:#e32b56;">12</view>
+        <view style="background:#5caadc;">14</view>
+        <view style="background:#f7b801;">16</view>
+        <view style="background:#65b959;">18</view>
+      </view>
+      <view class="domsBottom">
+        <view style="color:#e32b56;">红色</view>
+        <view style="color:#5caadc;">蓝色</view>
+        <view style="color:#f7b801;">黄色</view>
+        <view style="color:#65b959;">绿色</view>
+      </view>
+    </view>
+  </view>
+
+  <view>
+    <scroll-view class="scroll" scroll-x>
+      <view class="color1">
+        <view class="mgse">
+          <image src="../../../img/red.png" class="imgs"></image>
+          <view>12</view>
+        </view>
+        <view>
+          <text>红色—快来动机</text>
+        </view>
+        <view></view>
+      </view>
+      <view class="color2">
+        <view class="mgse">
+          <image src="../../../img/blue.png" class="imgs"></image>
+          <view>12</view>
+        </view>
+        <view>
+          <text>蓝色—完美动机</text>
+        </view>
+        <view></view>
+      </view>
+      <view class="color3">
+        <view class="mgse">
+          <image src="../../../img/yellow.png" class="imgs"></image>
+          <view>12</view>
+        </view>
+        <view>
+          <text>黄色—成就动机</text>
+        </view>
+        <view></view>
+      </view>
+      <view class="color4">
+        <view class="mgse">
+          <image src="../../../img/green2.png" class="imgs"></image>
+          <view>12</view>
+        </view>
+        <view>
+          <text>绿色—稳定动机</text>
+        </view>
+        <view></view>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 分享 -->
+  <!-- <button open-type="share" class='halve'>
+    分享
+  </button> -->
+</view>
+

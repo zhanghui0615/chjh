@@ -1,0 +1,28 @@
+page,page>view{
+  height: 100%;
+}
+input{
+  padding: 30rpx;
+  box-sizing: border-box;
+  width: 100%;
+  height: 96rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+picker {
+  padding: 30rpx;
+  box-sizing: border-box;
+  width: 100%;
+  height: 96rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.picker{
+  width: 100%;
+  height: 100%;
+}
+textarea{
+  padding: 30rpx;
+  box-sizing: border-box;
+  width: 100%;
+  height: 210rpx;
+  border-bottom: 1rpx solid #ccc;
+}

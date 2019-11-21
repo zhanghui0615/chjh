@@ -1,0 +1,17 @@
+<view>
+  <view class="rightsTitle">我的权益</view>
+  <view class="rightsMoreContent">
+        <view class="rightsMinDomTag">
+         <view>基础版套餐</view>
+        </view>
+        <view class="rightMoreText">
+                <view class="scrollse" wx:for='{{items}}'>
+                  <image src="../../../../img/xiaofangkuai.png" class="sdsd"></image>
+                  <view class="scrollsetext">
+                    <view>123</view>
+                    <view><text style="color:#f05233;">余10</text>/12次</view>
+                  </view>
+                </view>
+        </view>
+  </view>
+</view>

@@ -1,0 +1,234 @@
+page,page>view{
+  height: 100%;
+  background: #f3f3f3;
+}
+.goods{
+  width: 100%;
+}
+.goodsList{
+  width: 100%;
+  height: 214rpx;
+  margin: 18rpx 0;
+  background: white;
+  border-top:1rpx solid #ccc;
+  border-bottom:  1rpx solid #ccc;
+  padding: 16rpx 26rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.goodsImg{
+  width: 178rpx;
+  height: 178rpx;
+  float: left;
+}
+.goodsText{
+  float: left;
+  margin-left: 20rpx;
+  width: calc(100% - 198rpx);
+  font-size:30rpx;
+  height: 100%;
+  position: relative;
+}
+.goodsBottom{
+  position: absolute;
+  bottom: 2rpx; 
+  left: 0;
+  color: #e1360c;
+  overflow: hidden;
+  width: 100%;
+}
+.goodsNum{
+  width: 154rpx;
+  height: 42rpx;
+  float: right;
+  overflow: hidden;
+  color: black;
+}
+.goodsNumCut{
+  height: 100%;
+  width: 33.33%;
+  float: left;
+  background: #f3f3f3;
+  border-top-left-radius:21rpx;
+  border-bottom-left-radius: 21rpx;
+  text-align: center;
+  line-height: 40rpx;
+  font-size: 20rpx;
+  border: 1rpx solid #ccc;
+  box-sizing: border-box;
+}
+.goodsNumText{
+  width: 33.33%;
+  height: 100%;
+  float: left;
+  background: white;
+  text-align: center;
+  line-height: 40rpx;
+  font-size: 20rpx;
+  border-top: 1rpx solid #ccc;
+  border-bottom:  1rpx solid #ccc;
+  box-sizing: border-box;
+}
+.goodsNumAdd{
+  height: 100%;
+  width: 33.33%;
+  float: right;
+  background: #f3f3f3;
+  border-top-right-radius: 21rpx;
+  border-bottom-right-radius: 21rpx;
+  text-align: center;
+  line-height: 40rpx;
+  font-size: 20rpx;
+  border: 1rpx solid #ccc;
+  box-sizing: border-box;
+}
+.marquee{
+  padding: 0  24rpx;
+  width: 100%;
+  height:  auto;
+  box-sizing: border-box; 
+  margin-bottom: 114rpx;
+}
+.marquees{
+  width: 100%;
+  background: white;
+  border:1rpx solid #ccc;
+  border-radius: 10rpx;
+  padding: 26rpx;
+  box-sizing: border-box;
+}
+.address{
+  width: 100%;
+  height: 100rpx;
+  box-sizing: border-box;
+  padding-bottom: 26rpx;
+  border-bottom: 1rpx solid #ccc;
+  overflow: hidden;
+  font-size: 30rpx;
+}
+.address text{
+  line-height: 74rpx;
+  font-size: 26rpx;
+  float: left;
+}
+.address view:nth-child(1){
+  width: 410rpx;
+  height: 100%;
+}
+.address view:nth-child(2){
+  height: 100%;
+  position: relative;
+  float: right;
+}
+.address view:nth-child(2) image{
+  width: 20rpx;
+  height: 30rpx;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.freight{
+  width: 100%;
+  height: 100rpx;
+  border-bottom: 1rpx solid #ccc;
+  overflow: hidden;
+  line-height: 100rpx;
+  font-size: 30rpx;
+}
+.freight view:nth-child(1){
+  float: left;
+}
+.freight view:nth-child(2){
+  float: right;
+}
+.integral{
+  width: 100%;
+  height: 100rpx;
+  overflow: hidden;
+  position: relative;
+}
+.integralText{
+  float: left;
+  line-height: 100rpx;
+}
+.integralTitel{
+  font-size: 30rpx;
+  margin-right: 10rpx;
+}
+.integralMark{
+  font-size: 26rpx;
+  font-weight: 200;
+}
+.integralMark text{
+  color: #e1360c;
+}
+.integralBtn{
+  float: right;
+  width: 120rpx;
+  height: 40rpx;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/*swtich整体大小及背景色*/
+.wx-switch-input{
+   zoom: .8;
+    /* width:120rpx !important;
+    height:40rpx !important; */
+    /* background: #e1360c !important; */
+    /* border: #e1360c !important; 2018-07-18 重置开关边框颜色 */
+}
+/*白色样式（false的样式）*/
+/* .wx-switch-input::before{
+    width:120rpx !important;
+    height: 40rpx !important;
+    background: #bfbfbf!important;
+} */
+/*绿色样式（true的样式）*/
+/* .wx-switch-input::after{
+    width: 60rpx !important;
+    height: 40rpx !important;
+} */
+
+.orderFormBtn{
+  width: 100%;
+  height: 94rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: white;
+}
+.orderFormBtn>view{
+  float: right;
+}
+.orderFormBtn>view:nth-child(2)>text{
+  color: #fd7500;
+}
+.orderFormBtn>view:nth-child(1){
+  width: 220rpx;
+  height: 100%;
+  line-height: 94rpx;
+  background: #e1360c;
+  color: white;
+  font-size: 27rpx;
+  text-align: center;
+  margin-left: 30rpx;
+}
+.jiagese{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.dese{
+  height: 50%;
+  color: #969696;
+  font-size: 20rpx;
+}
+.desee{
+  height: 50%;
+  font-size: 28rpx;
+}
+.desee text{
+  color: #e1360c;
+}

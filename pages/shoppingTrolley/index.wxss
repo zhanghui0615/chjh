@@ -1,0 +1,231 @@
+page,page>view{
+  height: 100%;
+}
+.title{
+  width: 100%;
+  height: 94rpx;
+  text-align: center;
+  font-size: 36rpx;
+  line-height: 100rpx;
+  border-bottom: 1rpx solid #ccc;
+  background: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+.title>text{
+  height: 60rpx;
+  position: absolute;
+  right: 24rpx;
+  bottom: 24rpx;
+  font-size: 30rpx;
+}
+.content{
+  width: 100%;
+  background: #f3f3f3;
+  height:100%;
+  padding: 94rpx 24rpx;
+  box-sizing: border-box;
+}
+.price,.prices{
+  width: 100%;
+  height: 94rpx;
+  border-top: 1rpx solid #ccc;
+  background: white;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+.radios{
+  float: left;
+  margin: 0 24rpx;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 28rpx;
+  color: #3d3d3d;
+}
+.totalPrices{
+  float: right;
+  line-height: 94rpx;
+  color: #3d3d3d;
+  font-size: 26rpx;
+}
+.totalPrices text{
+  font-size: 28rpx;
+  color: #e1360c;
+}
+.settleBtn{
+  float: right;
+  width: 200rpx;
+  height: 100%;
+  color: white;
+  background: #e1360c;
+  border: 0;
+  border-radius: 0;
+  margin-left: 46rpx;
+  font-size: 28rpx;
+  line-height: 94rpx;
+}
+.contents{
+  width: 100%;
+  margin-top: 24rpx;
+  border-radius: 10rpx;
+  height:  254rpx; 
+  padding: 26rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: white;
+  color: #e1360c;
+}
+.contents:nth-last-child(1){
+  margin-bottom: 24rpx;
+}
+.contentcheckbox{
+  height: 100%;
+  line-height: 254rpx;
+  float: left;
+  width: 23rpx;
+  position: relative;
+}
+.contentcheckbox>checkbox{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+checkbox .wx-checkbox-input{
+    width: 31rpx;
+    height: 31rpx;
+   border-radius: 50%;/* 圆角 */
+}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+   border: 1rpx solid #fa4f00;
+   position: relative;
+}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+   content: '';
+   width: 80%;
+   height: 80%;
+   box-sizing: border-box;
+   background: #fa4f00;
+   text-align: center;
+   border-radius: 100%;
+}
+.is_checked{
+  border: 2rpx solid #fa4f00;
+}
+.contentImage{
+  width: 206rpx;
+  height: 100%;
+  margin: 0 26rpx;
+  float: left;
+}
+.contentImage image{
+  width: 100%;
+  height: 100%;
+}
+.contentDatas{
+  float: left;
+  width: calc(100% - 280rpx);
+  position: relative;
+  height: 100%;
+  font-size: 28rpx;
+}
+.contentTitle{
+  font-size: 28rpx;
+  color: #3d3d3d;
+}
+.contentPriceNums{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+.contentPriceFor{
+  float: left;
+}
+.contentNumFor{
+  width: 155rpx;
+  height: 46rpx;
+  float: right;
+  overflow: hidden;
+  border-radius: 23rpx;
+  text-align: center;
+  font-size: 30rpx;
+  line-height: 46rpx;
+  color: #000;
+  border: 2rpx solid #ccc;
+}
+.contentNumFor >text{
+  width: 50rpx;
+  height: 100%; 
+  float: left;
+}
+.contentNumFor view:nth-child(1){
+  width: 50rpx;
+  height: 100%;
+  line-height: 40rpx;
+  background: #f3f3f3;
+  float: left;
+}
+.jian{
+  width: 50rpx;
+  height: 100%;
+  line-height: 40rpx;
+  background: #f3f3f3;
+  float: right;
+}
+.prices>view{
+  float: left;
+}
+.prices>view:nth-child(1){
+  width: 49.5%;
+  height: 100%;
+  text-align: center;
+  line-height: 94rpx;
+}
+.prices>view:nth-child(2){
+  width: 1%;
+  height: 100%;
+  position: relative;
+}
+.prices>view:nth-child(2)::before{
+  content: '';
+  width: 2rpx;
+  height: 80%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  background: #a3a3a3;
+}
+.prices>view:nth-child(3){
+  width: 49.5%;
+  height: 100%;
+  text-align: center;
+  line-height: 94rpx;
+  color: #e1360c;
+}
+.contentImgs{
+  width:100%;
+  height: 340rpx;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+.contentImgs>image{
+  width: 300rpx;
+  height: 300rpx;
+  margin-left: 30rpx;
+}
+.contentImgs>view{
+  width: 100%;
+  font-size: 24rpx;
+  text-align: center;
+}

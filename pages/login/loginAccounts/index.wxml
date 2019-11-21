@@ -1,0 +1,80 @@
+<!--pages/login/loginAccounts/index.wxml-->
+<view class="login">
+<!-- logo -->
+  <!-- <view class="loginLogo">
+    <image src="../../../img/loginLogo.png"></image>
+  </view> -->
+  <view class="loginLogos">
+    <image src="../../../img/loginLogos.png"></image>
+  </view>
+  <!-- 微信登录按钮 -->
+  <view class="loginBtn">
+    <button type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+      <image src="../../../img/WechatIMG28.png"></image>
+      <text>微信帐号登录</text>
+    </button>
+    <!-- 其他登陆方式 -- 手机号登录 -->
+    <view>其他登陆方式</view>
+    <view bindtap="phonelogin" class="duanxins"><image src="../../../img/smallPhoneIcon.png"></image> 短信验证码登录</view>
+  </view>
+  <!-- 验证码弹窗 -->
+  <view class="phonePopup" wx:if="{{phoneLoginFalse}}">
+  <view class="phonePopups" bindtap="guanbi" ></view>
+  <view class="phonePopupView"  >  <!-- animation="{{animationData}}" -->
+      <text>短信验证码登录</text>
+      <view class='phoneForm'>
+        <text>手机号</text>
+        <input placeholder="请输入手机号" type="number" maxlength="11"></input>
+      </view>
+      <view class='phoneCodeForm'>
+        <text>验证码</text>
+        <input placeholder="请输入验证码"></input>
+        <button disabled="{{disabled}}" class="phoneCodeBtn" bindtap="phoneCodeBtn">{{phoneCodeText}}</button>
+      </view>
+      <button class="phoneBtns" bindtap="loginRegister">登录</button>
+    </view>
+  </view>
+
+
+<!-- 个人注册 弹窗 -->
+  <view class='personal' wx:if="{{personal}}">
+    <view class="personalCover" bindtap="guanbiPersonal"></view>
+    <view class="personalContent">
+      <text class="personalTitle">个人注册</text>
+      <view class="personalForm">
+        <text>姓名</text>
+        <input placeholder="请输入您的姓名"></input>
+      </view>
+        <view class="personalText">
+          离成功还剩一步
+        </view>
+      <button class="personalBtn" bindtap='personalLogin'>
+        注册
+      </button> 
+    </view>
+  </view>
+<!-- 企业注册 弹窗 -->
+  <view class="enterprise" wx:if='{{enterprise}}'>
+    <view class="enterpriseCover" bindtap="guanbiEnterprise"></view>
+    <view class="enterpriseContent">
+      <text class="enterpriseTitle">企业注册</text>
+      <view class="enterpriseForm">
+        <view>
+          <text>企业名称</text>
+          <input placeholder="请输入企业名称"></input>
+        </view>
+        <view>
+          <text>姓名</text>
+          <input placeholder="请输入您的姓名"></input>
+        </view>
+        <view>
+          <text>地址</text>
+          <input placeholder="请输入企业地址"></input>
+        </view>
+      </view>
+      <button class="enterpriseBtn" bindtap='enterpriseLogin'>
+        注册
+      </button> 
+    </view>
+  </view>
+</view>

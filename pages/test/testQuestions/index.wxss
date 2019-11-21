@@ -1,0 +1,111 @@
+/* pages/test/testQuestions/index.wxss */
+page,page>view{
+  height: 100%;
+}
+.Testhuadong{
+  width: 100%;
+  padding: 20rpx 0;
+  padding-left:26rpx; 
+  overflow: hidden
+}
+.testTiao{
+  width: calc(100% - 150rpx);
+  height:8rpx;
+  float: left;
+  background: #ffd8b6;
+  position: relative;
+  overflow:hidden;
+}
+.testTiao>view{
+  height: 100%;
+  border-radius: 8rpx;
+  background: #e1360c;
+}
+.testNum{
+  width: 150rpx;
+  text-align: center;
+  float: left;
+  line-height: 8rpx;
+}
+.testTitle{
+  width: 100%;
+}
+.ul{
+  position: relative;
+  transition: .5s;
+  overflow: hidden;
+}
+.li{
+  float: left;
+}
+.testContentTitle{
+  padding: 130rpx 34rpx 163rpx;
+  box-sizing: border-box;
+  font-size: 36rpx;
+  text-align: center;
+}
+.testContentText{
+  /* height: 100rpx; */
+  width: 700rpx;
+  line-height: 100rpx;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+  margin: 14rpx auto;
+  border-radius: 10rpx;
+  background: #f8f6f6;
+  position: relative;
+  font-weight: 300;
+}
+.previousQuestion{
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 20rpx;
+  left: 0;
+  color: #e1360c;
+}
+.previousQuestion view image{
+  height: 24rpx;
+  width: 26rpx;
+}
+.halve{
+  width: 91rpx;
+  height: 92rpx;
+  border-radius: 92rpx;
+  /* box-shadow:4rpx 8rpx 6rpx #CCCCCC; */
+  /* font-size: 20rpx; */
+  /* line-height: 80rpx; */
+  /* text-align: center; */
+  /* position: absolute; */
+  /* border:1rpx solid #ccc;  */
+  /* right: 8rpx; */
+  /* bottom: 154rpx; */
+  /* background: none; */
+  /* padding: 0; */
+}
+.halve button{
+  width: 91rpx;
+  height: 92rpx;
+  position: absolute;
+  right: 8rpx;
+  bottom: 154rpx;
+  z-index: 2;
+  background: rgba(red, green, blue, .0);
+  border: 0;
+  opacity: 0;
+}
+.halve image{
+  width: 91rpx;
+  height: 92rpx;
+  position: absolute;
+  right: 8rpx;
+  bottom: 154rpx;
+  z-index: 1;
+}
+.backgronds{
+  background: linear-gradient(to right,#fff, #333);
+}
+.textsde{
+  position: relative;
+  z-index: 2;
+}

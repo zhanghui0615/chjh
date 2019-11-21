@@ -1,0 +1,40 @@
+page,page>view{
+  height: 100%;
+}
+page>view{
+  width: 100%;
+  padding: 34rpx;
+  box-sizing: border-box;
+  background: #f3f3f3;
+}
+.mineContents{
+  width: 100%;
+  margin-top: 30rpx;
+  border: .5rpx solid #ccc;
+  background: white;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+}
+.mineContentKefu{
+  padding: 0 24rpx;
+  box-sizing: border-box;
+}
+.mineContentKefu>view{
+  width: 100%;
+  border-bottom: 2rpx solid #ccc;
+  padding: 30rpx 0;
+  overflow: hidden;
+}
+.mineContentKefu>view:nth-last-child(1){
+  border-bottom: 0;
+}
+.mineContentKefu>view>text{
+  float: left;
+  margin-left: 20rpx;
+}
+.mineContentKefu>view>image{
+  width: 24rpx;
+  height: 32rpx;
+  float: right;
+  margin-right: 30rpx;
+}

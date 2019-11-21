@@ -1,0 +1,14 @@
+/**app.wxss**/
+/* 引入 全局wxparse的wxss文件  最好不要用到全局不然 样式重叠就很烦*/
+view,text{
+  letter-spacing:3rpx;
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 

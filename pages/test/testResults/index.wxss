@@ -1,0 +1,133 @@
+page,page>view{
+  height: 100%;
+  white-space:nowrap;
+  background: #f3f3f3;
+}
+.halve{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 80rpx;
+  box-shadow:4rpx 8rpx 6rpx #CCCCCC;
+  font-size: 40rpx;
+  line-height: 80rpx;
+  text-align: center;
+  position: absolute;
+  border:1rpx solid #ccc; 
+  right: 8rpx;
+  bottom: 154rpx;
+  padding: 0;
+  background: white;
+}
+.name{
+  width: 100%;
+  padding:60rpx 0;
+  text-align: center; 
+  color: #e1360c;
+  font-size: 36rpx;
+}
+.doms{
+  width: 640rpx;
+  margin: 0 auto;
+  overflow: hidden;
+  background: white;
+}
+.domsTop{
+  width: 100%;
+  height: 78rpx;
+  border-radius: 39rpx;
+  overflow: hidden;
+  font-size: 40rpx;
+}
+.domsBottom{
+  width: 100%;
+  overflow: hidden;
+  font-size: 26rpx;
+}
+.domsBottom>view{
+  float: left;
+  width: 25%;
+  height: 100%;
+  text-align: center;
+  font-size: 26rpx;
+  line-height: 78rpx;
+}
+.domsTop>view{
+  float: left;
+  width: 25%;
+  height: 100%;
+  text-align: center;
+  color: white;
+  font-size: 40rpx;
+  line-height: 78rpx;
+}
+.scroll{
+  min-width:100%;
+  box-sizing: border-box;
+  background: #f3f3f3;
+  
+}
+.color1,.color2,.color3,.color4{
+  width: 614rpx;
+  height: 776rpx;
+  margin: 20rpx 20rpx 75rpx;
+  display: inline-block;
+  border-radius: 10rpx;
+  position: relative;
+}
+.color1{
+  border: 1rpx solid #e32b56;
+}
+.color2{
+  border: 1rpx solid #5caadc;
+}
+.color3{
+  border: 1rpx solid #f7b801;
+}
+.color4{
+  border: 1rpx solid #65b959;
+}
+.color1>view:nth-child(2),.color2>view:nth-child(2),.color3>view:nth-child(2),.color4>view:nth-child(2){
+  width: 100%;
+  padding-left: 120rpx;
+  box-sizing: border-box;
+  height: 78rpx;
+  line-height: 78rpx;
+  color: white;
+  font-size: 28rpx;
+  font-weight:600;
+}
+.color1>view:nth-child(2){
+  background: #e32b56;
+}
+.color2>view:nth-child(2){
+  background: #5caadc;
+}
+.color3>view:nth-child(2){
+  background: #f7b801;
+}
+.color4>view:nth-child(2){
+  background: #65b959;
+}
+.mgse{
+  width: 78rpx;
+  height: 90rpx;
+  position: absolute;
+  left: 12rpx;
+  top: 12rpx;
+}
+.mgse view{
+  width: 78rpx;
+  height: 90rpx;
+  position: absolute;
+  z-index: 2;
+  line-height: 90rpx;
+  text-align: center;
+  font-size: 40rpx;
+  color: white;
+}
+.imgs{
+  width: 78rpx;
+  height: 90rpx;
+  position: absolute;
+  z-index: 1;
+}

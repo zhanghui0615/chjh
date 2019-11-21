@@ -1,0 +1,99 @@
+<view class='topTabSwiper'>
+    <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}'  data-current = "0" bindtap='checkCurrent'>全部</view>
+    <view class='tab  {{currentData == 1 ? "tabBorer" : ""}}'  data-current = "1" bindtap='checkCurrent'>代付款</view>
+    <view class='tab  {{currentData == 2 ? "tabBorer" : ""}}'  data-current = "2" bindtap='checkCurrent'>待收货</view>
+    <view class='tab  {{currentData == 3 ? "tabBorer" : ""}}'  data-current = "3" bindtap='checkCurrent'>已完成</view>
+    <view class='tab  {{currentData == 4 ? "tabBorer" : ""}}'  data-current = "4" bindtap='checkCurrent'>已取消</view>
+</view>
+<swiper current="{{currentData}}" class='swiper' style="height: {{clientHeight?clientHeight+'px':'auto'}}" duration="300" bindchange="bindchange">
+<!-- 全部  -->
+  <swiper-item >
+    <scroll-view class='swiper_con' scroll-y="{{true}}" style="height: {{clientHeight?clientHeight+'px':'auto'}}"  bindscrolltolower="scrollbot">
+      <view class="goods" wx:for='{{goods}}' >
+        <!-- title 下单时间 状态  -->
+        <view class="titleDate">
+          <text style="color:#3d3d3d;">下单时间：{{item.delivery_time_text}}</text>
+          <text style="color:{{item.state!='已取消'?'#e1360c':''}};">{{item.state}}</text>
+        </view>
+        <!-- 商品 -->
+        <view class="goodsOver" bindtap="orderDetailsClick" data-index='{{item}}'>
+          <!-- 商品图片 -->
+          <image class="goodsImg" src="{{item.img}}"></image>
+          <!-- 商品信息 -->
+          <view class="goodsText">
+            <view class="goodsTextTitle">
+              <view>{{item.goodsName}}</view>
+              <view>
+                <text style="font-size:32rpx;"> ¥{{item.point_money}}</text>
+                <text>x{{item.how}}</text>
+              </view>
+            </view>
+            <!-- 数量合计 -->
+            <view class="goodsTextNum"><text style="font-size:22rpx;color:#">共{{item.how}}件商品 合计：</text>
+            <text style="font-size:32rpx; color:{{item.state!='已取消'?'#e1360c':''}}">¥{{item.pay_price}}</text></view>
+          </view>
+        </view>
+        <!--进行中 操作 -->
+        <view class="jinxing" wx:if="{{item.state=='进行中'}}">
+          <view bindtap="qrs">确认收货</view>
+          <view bindtap="orderDetailsClick" data-index='{{item}}'>查看物流</view>
+          <view>催快递</view>
+        </view>
+        <!--已完成 操作 -->
+        <view class="wancheng" wx:if="{{item.state=='已完成'}}">
+          <view>再次购买</view>
+          <view bindtap="orderDetailsClick" data-index='{{item}}'>查看物流</view>
+        </view>
+        <!--代付款 操作 -->
+        <view class="fukuan" wx:if="{{item.state=='代付款'}}">
+          <view>付款</view>
+          <view>取消订单</view>
+        </view>
+      </view>
+    </scroll-view>
+  </swiper-item> 
+  <!-- 代付款 -->
+  <swiper-item>
+    <swiper-view class='swiper_con'  scroll-y="{{true}}" style="height: {{nulls.length!=0?clientHeight+'px':'100%'}}"  >
+      <view class="tupian" wx:if='{{nulls.length == 0}}'>
+        <view>
+          <image src="../../../img/WechatIMG96.png"></image>
+          <view>啊哦，您还没有相关订单信息～</view>
+        </view>
+      </view>
+    </swiper-view>
+  </swiper-item>
+  <!-- 待收货 -->
+  <swiper-item>
+    <swiper-view class='swiper_con'  scroll-y="{{true}}" style="height: {{nulls.length!=0?clientHeight+'px':'100%'}}"  >
+      <view class="tupian" wx:if='{{nulls.length == 0}}'>
+        <view>
+          <image src="../../../img/WechatIMG96.png"></image>
+          <view>啊哦，您还没有相关订单信息～</view>
+        </view>
+      </view>
+    </swiper-view>
+  </swiper-item> 
+   <!--已完成  -->
+  <swiper-item>
+    <swiper-view class='swiper_con'  scroll-y="{{true}}" style="height: {{nulls.length!=0?clientHeight+'px':'100%'}}"  >
+      <view class="tupian" wx:if='{{nulls.length == 0}}'>
+        <view>
+          <image src="../../../img/WechatIMG96.png"></image>
+          <view>啊哦，您还没有相关订单信息～</view>
+        </view>
+      </view>
+    </swiper-view>
+  </swiper-item>  
+  <!-- 已取消 -->
+  <swiper-item>
+    <swiper-view class='swiper_con'  scroll-y="{{true}}" style="height: {{nulls.length!=0?clientHeight+'px':'100%'}}"  >
+      <view class="tupian" wx:if='{{nulls.length == 0}}'>
+        <view>
+          <image src="../../../img/WechatIMG96.png"></image>
+          <view>啊哦，您还没有相关订单信息～</view>
+        </view>
+      </view>
+    </swiper-view>
+  </swiper-item>
+</swiper>

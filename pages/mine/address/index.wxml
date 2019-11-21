@@ -1,0 +1,16 @@
+<view>
+  <!-- 地址 -->
+  <view wx:for='{{page}}' class="dizhilan">
+    <view class="xinxi">
+      <view>{{item.dizhi}}</view>
+      <view>{{item.details}}</view>
+      <view>{{item.page}}</view>
+      <view>{{item.name}}</view>
+    </view>
+    <view class="iconImg" bindtap="btnxiugai" data-items="{{item}}">
+      <image src="../../../img/841571647364_.pic_hd.jpg"></image>
+    </view>
+  </view>
+  <!-- 新增收货地址 -->
+  <button bindtap="aaaaaaa" class="xinzengBtn">新增收货地址</button>
+</view>

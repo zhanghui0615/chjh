@@ -1,0 +1,12 @@
+<view>
+    <view class="mineContents mineContentKefu">
+      <view>
+        <text>换绑手机号</text>
+        <image src="../../../img/signIn/1591571968980_.pic_hd.jpg"></image>
+      </view>
+      <view bindtap="individualBtn">
+        <text>换绑微信号</text>
+        <image src="../../../img/signIn/1591571968980_.pic_hd.jpg"></image>
+      </view>
+    </view>
+</view> 

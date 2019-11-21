@@ -1,0 +1,82 @@
+<view>
+  <!-- 物流跟踪 -->
+  <view class="logistics">
+    <view class="logisticsText">
+      <text>物流跟踪</text>
+      <text>物流跟踪物流跟踪</text>
+      <text>{{goodes.date}}</text>
+    </view>
+    <view class="logisticsImg"  bindtap="qx"><image src="../../../../img/4951573797663_.pic_hd.jpg"></image></view>
+  </view>
+  <!-- 地址 -->
+  <view class="address">
+    <view class="addressImg"><image src="../../../../img/minArrowsw.png"></image></view>
+    <view class="addressInfo">
+      <view>
+        <text>姓名</text>
+        <text>电话</text>
+      </view>
+      <view>地址</view>
+    </view>
+  </view>
+  <!-- 商品信息 -->
+  <view class="goods">
+    <view class="goodsImg">
+      <image src="../{{goodes.img}}"></image>
+    </view>
+    <view class="goodsText">
+      <view>
+        <view>{{goodes.goodsName}}</view>
+        <view>
+          <text>¥{{goodes.price}}</text>
+          <text>x{{goodes.how}}</text>
+        </view>
+      </view>
+      <view>¥{{goodes.price}}</view>
+    </view>
+  </view>
+  <!-- 功能 -->
+        <view class="jinxing"  wx:if="{{goodes.state=='进行中'}}">
+          <view bindtap="qrs">确认收货</view>
+          <view bindtap="qx">查看物流</view>
+          <view>催快递</view>
+        </view>
+        <!--已完成 操作 -->
+        <view class="wancheng" wx:if="{{goodes.state=='已完成'}}">
+          <view>再次购买</view>
+          <view>查看物流</view>
+        </view>
+        <!--代付款 操作 -->
+        <view class="fukuan" wx:if="{{goodes.state=='代付款'}}">
+          <view>付款</view>
+          <view>取消订单</view>
+        </view>
+
+
+
+<view class="dasd"  wx:if='{{bottoms}}'>
+  <view class="tops">
+    <image src="../../../../img/bgMin.png"></image>
+    <view class="topsView">
+      <view>交易成功</view>
+      <view>愿您有个愉快的购物体验～</view>
+    </view>
+    <view class="topscuwu" bindtap="guanbis">
+      <image src="../../../../img/cuowu.png"></image>
+    </view>
+  </view>
+  <scroll-view class="bottoms popularContent" scroll-y="true">
+      <view class="popularContentView" wx:for='{{num}}' id='{{item.id}}'>
+        <image class="popularContentImg" src="{{urls}}{{item.images[1]}}" bindtap="productDetails" data-data='{{item}}'></image>
+        <view class="popularNumber" bindtap="productDetails" data-data='{{item}}'>{{item.name}}</view>
+        <view>
+          <view class="popularDetails">
+            <text>¥{{item.price}}</text>
+            <text wx:if='{{item.switch_score == 0 }}'>{{item.score}}积分</text>
+            <image src="../../../../img/WechatIMG439.png" bindtap="shopClick"></image>
+          </view>
+        </view>
+      </view>
+  </scroll-view>
+</view>
+</view>

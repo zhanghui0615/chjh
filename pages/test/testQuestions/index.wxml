@@ -1,0 +1,35 @@
+<view>
+  <!-- 滑动条 -->
+  <view class="Testhuadong">
+  <!-- 条 -->
+    <view class="testTiao">
+      <view style="width:{{widths}}%;"></view>
+    </view>
+  <!-- 数字 -->
+    <view class="testNum">
+      {{num}}/{{total}}
+    </view>
+  </view>
+  <!-- 题库 -->
+  <view class="testTitle">
+    <view class="ul" style="width: {{total*100}}%;right:{{nums*100}}%">
+      <view class="li" wx:for='{{subject}}' wx:key="{{index}}" wx:for-index='number' style="width: {{100/total}}%;">
+        <view class="testContentTitle">{{item.title}}</view>
+        <view style="{{keys == index ?'color:white;':''}}" class="testContentText" wx:for='{{item.optionjson}}' wx:for-item='option' wx:for-key="idx" bindtap="jia" data-id="{{index}}" data-number="{{number}}" style="background:{{index + number == clickId ? 'linear-gradient(to bottom right, #e1700c , #e1360c);' :''}};color:{{index + number == clickId ? 'white':''}};" id="{{index}}" >
+        <view class="textsde"><text style="margin-right:10rpx;">{{index}}.</text>{{option}}</view>
+        
+        </view>
+      </view>
+    </view>
+    <!-- 上一题 -->
+    <view class="previousQuestion" bindtap="jian">
+    
+      <view><image src="../../../img/5501574056555_.pic_hd.jpg"></image>上一题</view>
+    </view>
+  </view>
+  <!-- 分享 -->
+  <view  class='halve'>
+  <button open-type="share" ></button>
+    <image src="../../../img/6361574154225_.pic_hd.jpg"></image>
+  </view>
+</view>

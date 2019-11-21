@@ -1,0 +1,51 @@
+<view>
+
+  <view class="title">
+    购物车
+    <text bindtap="bianji">{{bianjise?'完成':'编辑'}}</text>
+  </view>
+  <scroll-view scroll-y="true" class="content">
+    <view wx:if='{{article.length == 0}}' class="contentImgs">
+      <image src="../../img/WechatIMG96.png"></image>
+      <view>购物车还空空如也</view>
+    </view>
+    <checkbox-group wx:if='{{article.length != 0}}' bindchange="checkboxChange">
+      <view class="contents {{item.checked?'is_checked':''}}" wx:for='{{article}}'>
+        <view class="contentcheckbox">
+          <checkbox value='{{index}},{{item.price}},{{item.num}}' checked="{{item.checked}}"></checkbox>
+        </view>
+        <view class="contentImage">
+          <image src='{{item.img}}'></image>
+        </view>
+        <view class="contentDatas">
+          <view class="contentTitle">{{item.title}}</view>
+          <view class="contentPriceNums">
+            <view class="contentPriceFor">¥{{item.price}}</view>
+            <view class="contentNumFor">
+              <view bindtap="jian" data-id='{{item.id}}' data-price='{{item.price}}'>-</view>
+              <text>{{item.num}}</text>
+              <view class="jian" bindtap="jia" data-id='{{item.id}}' data-price='{{item.price}}'>+</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </checkbox-group>  
+  </scroll-view>
+  <view wx:if='{{bianjis}}' class="price">
+    <view class="radios">
+      <checkbox bindtap="checkAll"  disabled="{{article.length == 0}}"></checkbox>全选
+    </view>
+    <button disabled="{{article.length == 0}}" bindtap="orderForm" class="settleBtn">
+      结算({{numbernums}})
+    </button>
+    <view class="totalPrices">
+      总计:<text>¥{{tariff}}</text>
+    </view>
+  </view>
+  <view wx:if='{{bianjise}}' class="prices">
+    <view bindtap="checkAll">全选</view>
+    <view></view>
+    <view bindtap="deletes">删除({{numbernums}})</view>
+  </view>
+  <mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+</view>

@@ -1,0 +1,268 @@
+/* pages/login/loginAccounts/index.wxss */
+page{
+  background:#f3f3f3;
+}
+.login{
+  width: 100%;
+  height: 100%;
+  padding-top: 100rpx;
+}
+.loginLogo{
+  width: 222rpx;
+  height: 62rpx;
+  position: absolute;
+  right: 20rpx;
+  top: 44rpx;
+}
+.loginLogo image{
+  width: 100%;
+  height: 100%;
+}
+.loginLogos{
+  width: 332rpx;
+  height: 435rpx;
+  margin: 0 auto;
+  position: relative;
+}
+.loginLogos image{
+  width: 100%;
+  height: 112rpx;
+  position: absolute;
+  bottom: 176rpx;
+}
+.loginBtn{
+  width: 618rpx;
+  margin: 0 auto;
+  color: white;
+}
+.loginBtn view{
+  border-radius: 0;
+  height: 105rpx;
+  line-height:105rpx;
+  margin-bottom: 42rpx;
+  text-align: center;
+}
+.loginBtn view:nth-child(1){
+  color: white;
+  background: #e1360c;
+  border: none;
+}
+.loginBtn view:nth-child(2){
+  margin-bottom: 40rpx;
+  color:black;
+  background: white;
+  border: 2rpx solid #ccc;
+}
+
+.phonePopup{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background:rgba(0, 0, 0, .8);
+  /* display: none; */
+}
+.phonePopups{
+  width: 100%;
+  height: calc(100% - 882rpx);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.phonePopupView{
+  width: 100%;
+  height: 982rpx;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: white;
+  padding: 0 60rpx;
+  box-sizing: border-box;
+}
+.phonePopupView>text{
+  text-align: center;
+  box-sizing: border-box;
+  padding: 104rpx 0;
+  display: block;
+  font-size: 48rpx;
+}
+.phoneForm,
+.phoneCodeForm{
+  width: 100%;
+  overflow: hidden;
+  height: 94rpx;
+  border-bottom: 2rpx solid #ccc;
+  padding-left: 40rpx;
+  box-sizing: border-box;
+  line-height: 94rpx;
+  position: relative;
+  margin-top: 32rpx;
+}
+.phoneCodeForm{
+  margin-top: 32rpx;
+}
+.phoneForm text,
+.phoneCodeForm text{
+  float: left
+}
+.phoneForm input,
+.phoneCodeForm input{
+  border: none;
+  float: left;
+  position: absolute;
+  right: 60rpx;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.phoneCodeForm button{
+  float: left;
+  border: 0;
+  font-size: 24rpx;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #e1360c;
+  color: white;
+}
+.phoneBtns{
+  margin-top: 120rpx;
+  background: #e1360c;
+  color: white;
+  border-radius: 0;
+  border: 0;
+}
+/* 个人注册弹窗 */
+.personal{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background:rgba(0, 0, 0, .8);
+  /* display: none; */
+}
+.personalCover{
+  width: 100%;
+  height: calc(100% - 754rpx);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.personalContent{
+  width: 100%;
+  height: 754rpx;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: white;
+  padding: 0 60rpx;
+  box-sizing: border-box;
+}
+.personalTitle{
+  text-align: center;
+  box-sizing: border-box;
+  padding: 104rpx 0;
+  display: block;
+  font-size: 48rpx;
+}
+.personalForm{
+  width: 100%;
+  overflow: hidden;
+  height: 94rpx;
+  border-bottom: 2rpx solid #ccc;
+  padding-left: 40rpx;
+  box-sizing: border-box;
+  line-height: 94rpx;
+  position: relative;
+}
+.personalForm text{
+  float: left
+}
+.personalForm input{
+  border: none;
+  float: left;
+  position: absolute;
+  right: 60rpx;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.personalText{
+  text-align: right;
+  color: #a1a1a1;
+  font-size: 24rpx;
+  width: 100%;
+  padding: 8rpx;
+  box-sizing: border-box;
+}
+.personalBtn{
+  margin-top: 80rpx;
+  background: #e1360c;
+  color: white;
+  border-radius: 0;
+  border: 0;
+}
+/* 企业注册弹窗 */
+.enterprise{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background:rgba(0, 0, 0, .8);
+  /* display: none; */
+}
+.enterpriseCover{
+  width: 100%;
+  height: calc(100% - 1022rpx);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.enterpriseContent{
+  width: 100%;
+  height: 1022rpx;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: white;
+  padding: 0 60rpx;
+  box-sizing: border-box;
+}
+.enterpriseTitle{
+  text-align: center;
+  box-sizing: border-box;
+  padding: 104rpx 0;
+  display: block;
+  font-size: 48rpx;
+}
+.enterpriseForm>view{
+  width: 100%;
+  overflow: hidden;
+  height: 94rpx;
+  border-bottom: 2rpx solid #ccc;
+  padding-left: 40rpx;
+  box-sizing: border-box;
+  line-height: 94rpx;
+  position: relative;
+  margin-top: 32rpx;
+}
+.enterpriseForm>view>text{
+  float: left
+}
+.enterpriseForm>view>input{
+  border: none;
+  float: left;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.enterpriseBtn{
+  margin-top: 80rpx;
+  background: #e1360c;
+  color: white;
+  border-radius: 0;
+  border: 0;
+}

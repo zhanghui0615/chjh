@@ -1,0 +1,112 @@
+<view>
+  <!-- 头像 积分 签到 -->
+  <view class="info">
+    <image class="infoBackgroundImg" src="../../img/bgMin.png"></image>
+    <view class="infoContent">
+      <view class="headPortrait" wx:if='{{hasUserInfo ==true}}'>
+        <image src="{{userInfo.avatarUrl}}"></image>
+        <text>{{userInfo.nickName}}</text>
+      </view>
+      <view class="notLoggedIn" bindtap="login" wx:if='{{hasUserInfo ==false}}'>
+        <image></image>
+        <view>
+          <text>点击显示微信头像</text>
+          <image src="../../img/minArrows.png"></image>
+        </view>
+      </view>
+      <view class="integral">
+        <view class="integralNum">
+          <text>{{integral}}</text>
+          <text>积分</text>
+        </view>
+        <view class="middle"></view>
+        <view class="signIn" bindtap="qiandaoBtn">
+          <image src="../../img/signIn/minDactylogram.png"></image>
+          <text>签到</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 订单 客服 会员信息 增值 地址 -->
+  
+  <scroll-view class="mineContent">
+    <view class="mineContents">
+      <view class="mineContentsTitle">
+        <view>我的订单</view>
+        <view bindtap="chakanqunbu">查看全部</view>
+      </view>
+      <view class="mineContentsText">
+        <view data-id="0" bindtap="orderJump">
+          <image src='../../img/1.png'></image>
+          <view class="reddot" wx:if='{{reddot.reddot1 >0}}'>{{reddot.reddot1}}</view>
+          <view>代付款</view>
+        </view>
+        <view data-id="1" bindtap="orderJump">
+          <image src='../../img/2.png'></image>
+          <view class="reddot" wx:if='{{reddot.reddot2 >0}}'>{{reddot.reddot2}}</view>
+          <view>待发货</view>
+        </view>
+        <view data-id="2" bindtap="orderJump">
+          <image src='../../img/3.png'></image>
+          <view class="reddot" wx:if='{{reddot.reddot3 >0}}'>{{reddot.reddot3}}</view>
+          <view>待收货</view>
+        </view>
+        <view data-id="3" bindtap="orderJump">
+          <image src='../../img/4.png'></image>
+          <view class="reddot" wx:if='{{reddot.reddot4 >0}}'>{{reddot.reddot4}}</view>
+          <view>已完成</view>
+        </view>
+        <view data-id="4" bindtap="orderJump">
+          <image src='../../img/5.png'></image>
+          <view class="reddot" wx:if='{{reddot.reddot5 >0}}'>{{reddot.reddot5}}</view>
+          <view>已取消</view>
+        </view>
+      </view>
+    </view>
+    <view class="mineContents mineContentKefu">
+      <view bindtap="kefus">
+        <text>我的客服</text>
+        <image src="../../img/signIn/1591571968980_.pic_hd.jpg"></image>
+      </view>
+      <view  bindtap="rightsBtn" wx:if="{{zhuangtais == '个人'}}">
+        <text>会员权益</text>
+        <image src="../../img/signIn/1591571968980_.pic_hd.jpg"></image>
+      </view>
+    </view>
+    <view class="mineContents mineContentKefu">
+      <view bindtap="addressBtn">
+        <text>配送地址</text>
+        <image src="../../img/signIn/1591571968980_.pic_hd.jpg"></image>
+      </view>
+      <view bindtap="individualBtn">
+        <text>个人设置</text>
+        <image src="../../img/signIn/1591571968980_.pic_hd.jpg"></image>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="popups" wx:if='{{show}}' catchtouchmove='true'>
+    <!-- 注意事项内容 -->
+    <view class="popUpsContent">
+      <image src="../../img/tanchuang.png" class="popImgs"></image>
+      <view class="popUpsContentText">
+        <view>
+          <view>以上服务如需开通</view>
+          <view>请联系我们</view>
+        </view>
+        <view class="popUpsContentTextImg">
+          <image src="{{urls}}{{lianxiwm.qr_code_image}}"></image>
+        </view>
+        <view>
+          <view>微信：{{lianxiwm.wechat}}</view>
+          <view>手机：{{lianxiwm.iphone}}</view>
+          <view>座机：{{lianxiwm.updatetime}}</view>
+        </view>
+      </view>
+      <!-- 注意事项关闭按钮 -->
+      <view class="popUpsBtn" bindtap="showBtn">
+        <image src="../../img/841571647364_.pic_hd.jpg"></image>
+      </view>
+    </view>
+  </view>
+</view>

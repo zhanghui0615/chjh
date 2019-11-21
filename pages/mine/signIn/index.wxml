@@ -1,0 +1,73 @@
+<view>
+  <view class="tobu">
+  <!-- 背景图片 -->
+    <image class="tobuBackground" src='../../../img/bgMin.png'></image>
+    <view class="tobuConetnet">
+      <view class="tobuMin">
+        我的积分：{{}}
+      </view>
+      <view class="tobuRadius" wx:if='{{!tobuRadius}}' bindtap="signNewFn" data-num ='{{newSignNum}}'>
+        <image src="../../../img/signIn/qiandaoRadius.png"></image>
+        <view>
+          <text>签到</text>
+          <text>10积分</text>
+        </view>
+      </view>
+      <view class="tobuRadius" wx:if='{{tobuRadius}}'>
+        <image src="../../../img/signIn/1461571967336_.pic_hd.jpg"></image>
+        <view>
+          <text>已签到</text>
+        </view>
+      </view>
+      <view class="tobuTianshu">
+        <view class="tobuTianshuTitle">
+          <text>已连续签到{{newSignNum}}天</text>
+        </view>
+      <!-- 签到列表 -->
+        <view class="signInFate">
+          <view wx:for='{{isNewSignedArr}}'>
+            <view><image src="../../../img/signIn/checkInDays.png" wx:if='{{!item.isSigned}}'></image></view>
+            <text>{{item.day}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 积分兑换 -->
+  <view class="redeem">
+    <view class="redeemTitle">
+      <text>积分兑换</text>
+    </view>
+    <view class="redeemduihuan" wx:for='{{num}}'>
+      <image src="{{urls}}{{item.images[0]}}"></image>
+      <view>
+        <view>{{item.name}}</view>
+        <view>
+          <text>{{item.score}}积分</text>
+          <view>立即兑换</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="popUps" wx:if='{{show}}'>
+    <!-- 注意事项内容 -->
+    <view class="popUpsContent">
+      <view class="popUpsContentText">
+        <view class="popUpsContentTextImg"> <image src="../../../img/signInLogoImg.png"></image> </view>
+        <view class="popUpsText">
+          <view>已连续登录<text>{{tian}}</text>天</view>
+          <view>恭喜获得<text>{{jifen}}</text>积分</view>
+        </view>
+        <view class="popUpsText" style="font-size:26rpx;margin-top:202rpx;">积分可兑换商品</view>
+      </view>
+      <!-- 注意事项关闭按钮 -->
+      <view class="popUpsBtn" bindtap="showBtn">
+        <image src="../../../img/841571647364_.pic_hd.jpg"></image>
+      </view>
+    </view>
+  </view>
+
+
+
+</view>

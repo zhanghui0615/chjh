@@ -1,0 +1,156 @@
+<view>
+  <view class="rightsTitle">会员权益</view>
+  <view class="rightsContent">
+    <view class="rightsMin" style="height:{{mode == 0 ? 266 : 460}}rpx;">
+      <view class="rightsMinDom">
+        <view class="backgrounImg"> 
+          <image src="../../../img/backgrounTop.png"></image>
+          <image src="../../../img/backgrounBottom.png"></image>
+        </view>
+        <view class="backgrounText">
+          <view class="rightsMinDomTitle" style="border-bottom:{{mode == 0 ? '' :'1rpx solid #ccc'}}">
+            <view>我的权益</view>
+            <view wx:if='{{mode!=0}}' bindtap="more">更多></view>
+          </view>
+          <view class="rightsMinDomTag"  wx:if='{{mode!=0}}'>
+          <view>基础版套餐</view>
+          </view>
+          <view class="rightsMinDomContent">
+            <view class="rightsMinDomContentView"   wx:if='{{mode==0}}'>暂无服务套餐</view>
+            <view class="rightsMinDomContentViews" wx:if='{{mode!=0}}'>
+              <scroll-view  class="scroll" scroll-x>
+                <view class="scrollse" wx:for='{{items}}'>
+                  <image src="../../../img/xiaofangkuai.png" class="sdsd"></image>
+                  <view class="scrollsetext">
+                    <view>123</view>
+                    <view><text style="color:#f05233;">余10</text>/12次</view>
+                  </view>
+                </view>
+              </scroll-view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="xinxis">
+      <view class="infos">
+        <view class="left"><image src="{{info.avatarUrl}}"></image></view>  <!--头像-->
+        <view class="lefts">
+          <view>{{info.nickName}}</view>
+          <view>
+            <view>vip会员到期</view>
+            <view>{{dates}}</view>
+          </view>
+        </view>
+        <view class="right" wx:if='{{mode!=0}}' bindtap="moreinfo"><image src="../../../img/icons3.png" style="transform: rotate({{truse ? '0':'180deg' }});"></image></view>
+      </view>
+      <view class="information">
+        <view class="informationTexts" wx:for='{{infotext}}' wx:if='{{truse}}'>
+          <view class="infoLeft">{{item.left}}:</view>
+          <view class="infoRight">{{item.right}}</view>
+        </view>
+        <view class="vipContact"  wx:if='{{truse}}'>
+          <view class="vipContactTitle">
+            <view>
+              会员店联系人
+            </view>
+          </view>
+          <view class="infoContens">
+            <view wx:for='{{infoses}}' class="ifopsd">
+              <view>
+                <view>姓名:</view>
+                <view>{{item.name}}</view>
+              </view>
+              <view>
+                <view>联系方式:</view>
+                <view>{{item.lianxi}}</view>
+              </view>
+              <view>
+                <view>职位:</view>
+                <view>{{item.zhiwe}}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="increment">
+      <view class="incrementTitle">
+        <view>增值服务套餐</view>
+      </view>
+      <view class="incrementContent">
+        <!-- tab切换导航 -->
+        <view class="tabNav">
+          <view>
+            <view bindtap="clickView" class="{{clickView ?'clickViewBackground':''}}">基础版</view>
+            <view bindtap="clickViewj" class="{{clickViewj ?'clickViewBackground':''}}">经济版</view>
+            <view bindtap="clickViewp" class="{{clickViewp ?'clickViewBackground':''}}">Plus版</view>
+          </view>
+        </view>
+        <!-- tab切换内容 -->
+        <view class="tabContent"   bindtap="clickPopUps">
+          <view wx:if='{{clickView}}'>
+            <view>
+              <image src="../../../img/titles.png" class="imagese"></image>
+              <view class="imse">套餐价：14800元/年</view>
+            </view>
+            <image src="../../../img/5211574044128_.pic_hd.jpg" class="sadeimg"></image>
+            <view>云和客小程序使用1次/2月 （全年6次）</view>
+            <view>基础版</view>
+            <view>基础版</view>
+            <view>基础版</view>
+            <view>基础版</view>
+            <view>基础版</view>
+            <view>基础版</view>
+            <view>基础版</view>
+            <view>基础版</view>
+            <view>基础版</view>
+            <view>基础版</view>
+            <view>基础版</view>
+          </view>
+          <view wx:if='{{clickViewj}}'>
+            <view>
+              <image src="../../../img/titles.png" class="imagese imgs"></image>
+              <view class="imse imgs">套餐价：14800元/年</view>
+            </view>
+            <image src="../../../img/5211574044128_.pic_hd.jpg" class="sadeimg"></image>
+            <view>经济版</view>
+          </view>
+          <view wx:if='{{clickViewp}}'>
+            <view>
+              <image src="../../../img/titles.png" class="imagese imgs1"></image>
+              <view class="imse imgs1">套餐价：14800元/年</view>
+            </view>
+            <image src="../../../img/5211574044128_.pic_hd.jpg" class="sadeimg"></image>
+            <view>Plus版</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 注意事项打开后的页面 -->
+  <view class="popups" wx:if='{{show}}' catchtouchmove='true'>
+    <!-- 注意事项内容 -->
+    <view class="popUpsContent">
+      <image src="../../../img/tanchuang.png" class="popImgs"></image>
+      <view class="popUpsContentText">
+        <view>
+          <view>以上服务如需开通</view>
+          <view>请联系我们</view>
+        </view>
+        <view class="popUpsContentTextImg">
+          <image src="{{urls}}{{lianxiwm.qr_code_image}}"></image>
+        </view>
+        <view>
+          <view>微信：{{lianxiwm.wechat}}</view>
+          <view>手机：{{lianxiwm.iphone}}</view>
+          <view>座机：{{lianxiwm.updatetime}}</view>
+        </view>
+      </view>
+      <!-- 注意事项关闭按钮 -->
+      <view class="popUpsBtn" bindtap="showBtn">
+        <image src="../../../img/841571647364_.pic_hd.jpg"></image>
+      </view>
+    </view>
+  </view>
+</view>

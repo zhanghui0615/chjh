@@ -1,0 +1,68 @@
+<!--pages/productDetails/index.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+<view>
+  <!-- 轮播图 -->
+  <view>
+    <swiper style="height:{{heights}}px" circular="{{circular}}" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{urls}}{{item}}" class="slide-image" width="100%" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- 价格 -->
+  <!-- 名称介绍 -->
+  <view class="detailsTitle">
+    <view class="jiages">
+      <view>
+        ¥<text>{{transferData.price}}</text>
+      </view>
+      <view>{{transferData.score}}积分</view>
+    </view>
+    <view class='detailsTitleName'>{{transferData.name}}</view>
+    <view class="detailsTitleReferral">{{transferData.title}}</view>
+  </view>
+  <!-- 详情 参数 规格 -->
+  <view>
+    <view class="detailsNav">
+      <view class='title'>
+        <view class='titleSel'>详情</view>
+        <view class='titleSel'>参数</view>
+        <view class='titleSel'>规格</view>
+      </view>
+    </view>
+    <!-- 详情 -->
+    <view class="details">
+
+          <view class="detailsContent">
+            <template is="wxParse" data="{{wxParseData:htmls.nodes}}" />
+          </view>
+
+          <view class="parameterContent">
+            <template is="wxParse" data="{{wxParseData:htmlse.nodes}}" />
+          </view>
+
+          <view class="standardContent">
+            <template is="wxParse" data="{{wxParseData:htmlsee.nodes}}" />
+          </view>
+    </view>
+  </view>
+  <!-- 底部导航 -->
+  <view class="bottomNav">
+    <view class="bottomNavgwcs">
+      <view>
+        <image src="../../img/6851574244729_.pic_hd.jpg"></image>
+        <view>客服</view>
+      </view>
+      <view>
+        <image src="../../img/6841574244726_.pic_hd.jpg"></image>
+        <view>购物车</view>
+      </view>
+    </view>
+    <view class="bottomNavBtn">
+      <view>加入购物车</view>
+      <view>立即购买</view>
+    </view>
+  </view>
+</view>

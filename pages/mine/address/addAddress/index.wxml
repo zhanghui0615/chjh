@@ -1,0 +1,16 @@
+
+<view>
+  <input placeholder="收货人姓名" value="{{name}}" bindinput='userNameFn'></input>
+  <input placeholder="手机号码" value="{{page}}" type="number" bindinput='pageBtn'></input>
+  <picker mode="region" bindchange="province" value="{{region}}" custom-item="{{customItem}}">
+    <view  class="picker" placeholder='所在地区（省/市）'>
+      请选择地址：{{region[0]}}-{{region[1]}}-{{region[2]}}
+    </view>
+  </picker>
+  <textarea class="detailText" 
+    placeholder="详细地址：如街道、门牌号、小区、楼栋号、单元室等"
+    bindinput='detailsBtn'
+    value="{{details}}">
+</textarea>
+  <button bindtap="tijiao">提交</button>
+</view>

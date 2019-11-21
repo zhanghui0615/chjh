@@ -1,0 +1,62 @@
+<!--pages/homePage/index.wxml-->
+
+<!-- 引入 wxparse wxml -->
+<!-- <import src="../../wxParse/wxParse.wxml"/> -->
+
+<view>
+  <!-- 标题栏 title -->
+  <view class="homePageView" style="padding-top:{{statusBarHeight}}px; height:{{styles == 1?'auto':''}} ; height:{{styles == 2?'auto':''}};">
+    <text>传慧帮</text>
+  </view>
+  <!-- 搜索框 -->
+  <view class="homeContent">
+    <view class="homess" style="margin-top:{{styles == 1?'178rpx':''}};margin-top:{{styles == 2?'170rpx':''}};">
+      <input placeholder="搜索商品" bindconfirm="seek"></input>
+      <image src="../../img/WechatIMG53.png"></image>
+    </view>
+    <!-- 轮播图 -->
+    <view class="lbt">
+      <swiper style="height:100%;" circular="{{circular}}" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{imgUrls}}">
+          <swiper-item>
+            <image src="{{urls}}{{item.image}}" class="slide-image" width="100%" />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+  <!-- 子菜单 -->
+  <view class="homerNav">
+    <view wx:for='{{imgMenu}}'>
+      <image src="{{item.img}}"></image>
+      <text>{{item.title}}</text>
+    </view>
+  </view>
+
+  <!-- <view> -->
+  <!-- 富文本显示的内容区域 -->
+  <!-- <template is="wxParse" data="{{wxParseData:htmls.nodes}}"/> -->
+  <!-- </view> -->
+  
+  <!-- 热门推荐 -->
+  <view class="popular">
+    <view class='popularTitle'>
+      <text>热门推荐</text>
+      <view bindtap="more">更多 <image src="../../img/1591571968980_.pic_hd.jpg"></image></view>
+    </view>
+    <view class="popularContent">
+      <!-- 商品  -->
+      <view wx:for='{{num}}' id='{{item.id}}'>
+        <image class="popularContentImg" src="{{urls}}{{item.images[0]}}" bindtap="productDetails" data-data='{{item}}'></image>
+        <view class="popularNumber" bindtap="productDetails" data-data='{{item}}'>{{item.name}}</view>
+        <view>
+          <view class="popularDetails">
+            <view>¥ <text style="font-size:40rpx;vertical-align:bottom;">{{item.price}}</text></view>
+            <text wx:if='{{item.switch_score == 0 }}'>{{item.score}}积分</text>
+            <image src="../../img/WechatIMG439.png" bindtap="shopClick"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

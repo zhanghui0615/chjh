@@ -1,0 +1,84 @@
+page,page>view{
+  height: 100%;
+}
+.rightsTitle{
+  width: 100%;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 34rpx;
+}
+.rightsMoreContent{
+  width: 100%;
+  height: calc(100% - 100rpx);
+  padding: 26rpx;
+  box-sizing: border-box;
+  background: linear-gradient( #3b170a, #201008);
+}
+
+.rightsMinDomTag{
+  width: 100%;
+  padding: 24rpx 0 0;
+  box-sizing: border-box;
+}
+.rightsMinDomTag>view{
+  width: 164rpx;
+  height: 53rpx;
+  font-size: 24rpx;
+  background: linear-gradient(to right, #eed2ba, #dcb39e);
+  border-radius: 10rpx;
+  text-align: center;
+  line-height: 53rpx;
+  color: #51362f;
+}
+.rightMoreText{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.rightMoreText>view{
+  width: 218rpx;
+  height: 196rpx;
+  margin-bottom: 22rpx;
+  color: white;
+  font-size: 20rpx;
+}
+
+.scrollse{
+  width: 220rpx;
+  height: 220rpx;
+  margin-top: 24rpx;
+  color: white;
+  font-size: 30rpx;
+  position: relative;
+}
+.sdsd{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 220rpx !important;
+  height: 220rpx !important;
+  z-index: 0;
+}
+.scrollsetext{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 220rpx;
+  height: 220rpx;
+  z-index: 1;
+  color: white;
+  padding: 20rpx;
+  text-align:center;
+  box-sizing: border-box;
+  font-size: 30rpx;
+}
+.scrollsetext view:nth-child(2){
+  width: 100%;
+  position: absolute;
+  bottom: 0rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fad093;
+}

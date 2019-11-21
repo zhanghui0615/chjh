@@ -1,0 +1,68 @@
+{
+  "pages": [
+    "pages/homePage/index",
+    "pages/login/loginAccounts/index",
+    "pages/login/login/index",
+    "pages/category/index",
+    "pages/productDetails/index",
+    "pages/test/index",
+    "pages/shoppingTrolley/index",
+    "pages/mine/index",
+    "pages/test/testQuestions/index",
+    "pages/mine/individual/index",
+    "pages/mine/address/index",
+    "pages/mine/address/addAddress/index",
+    "pages/orderForm/index",
+    "pages/mine/signIn/index",
+    "pages/mine/mineOrderForm/index",
+    "pages/mine/mineOrderForm/orderDetails/index",
+    "pages/test/testResults/index",
+    "pages/mine/rights/index",
+    "pages/more/index",
+    "pages/mine/rights/more/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#e3421a",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/homePage/index",
+        "text": "首页",
+        "iconPath": "img/navhompage.png",
+        "selectedIconPath": "img/navhompagexz.png"
+      },
+      {
+        "pagePath": "pages/category/index",
+        "text": "分类",
+        "iconPath": "img/navsort.png",
+        "selectedIconPath": "img/5221574044132_.pic_hd.jpg"
+      },
+      {
+        "pagePath": "pages/test/index",
+        "text": "测性格",
+        "iconPath": "img/navTest.jpg",
+        "selectedIconPath": "img/navTestxz.jpg"
+      },
+      {
+        "pagePath": "pages/shoppingTrolley/index",
+        "text": "购物车",
+        "iconPath": "img/navShopping.png",
+        "selectedIconPath": "img/navShoppingxz.png"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "我的",
+        "iconPath": "img/navMy.png",
+        "selectedIconPath": "img/navMyxz.png"
+      }
+    ]
+  }
+}

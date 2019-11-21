@@ -1,0 +1,59 @@
+<view>
+  <!-- 商品 -->
+  <view class="goods">
+    <!-- 商品列表 -->
+    <view class="goodsList" wx:for='{{goods}}'>
+      <image class="goodsImg" src="{{item.img}}"></image>
+      <view class="goodsText">
+        <text class="goodsTitle">{{item.title}}</text>
+        <view class="goodsBottom">
+          <text class="goodsPrice">{{item.price}}</text>
+          <view class="goodsNum">
+            <view class="goodsNumCut" bindtap="jian" data-id='{{item.id}}' data-price='{{item.price}}'>-</view>
+            <view class="goodsNumText">{{item.num}}</view>
+            <view class="goodsNumAdd" bindtap="jia" data-id='{{item.id}}' data-price='{{item.price}}'>+</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 收货地址 运费 积分-->
+  <view class="marquee">
+    <view class="marquees">
+      <!-- 地址 -->
+      <view class="address">
+        <text bindtap="shippingAddress">{{dizhitrue}}</text>
+        <view>
+        {{dizhi.userName}} {{dizhi.telNumber}}
+        {{dizhi.provinceName}}
+        </view>
+        <view>
+          <image></image>
+        </view>
+      </view>
+      <!-- 运费 -->
+      <view class="freight">
+        <view>运费</view>
+        <view>¥ 0.00</view>
+      </view>
+      <!-- 积分 -->
+      <view class="integral">
+        <view class="integralText">
+          <text class="integralTitel">积分</text>
+          <text class="integralMark">共<text>300分</text>,可抵<text>¥30</text></text>
+        </view>
+        <view class="integralBtn">
+            <switch name="switch" checked="{{isChecked}}" bindchange="changeSwitch" />
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 订单按钮 -->
+  <view class="orderFormBtn">
+    <view bindtap="tijiaodingdan">提交订单</view>
+    <view class="jiagese">
+      <view wx:if='{{truese}}' class="dese">价格:<text style="text-decoration:line-through">¥599</text></view>
+      <view class="desee">总计:<text >¥{{tariff}}</text></view>
+    </view>
+  </view>
+</view>

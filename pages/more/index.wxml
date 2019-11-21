@@ -1,0 +1,22 @@
+<view>
+<view class="homess" >
+      <input placeholder="搜索商品" bindconfirm='inputs'></input>
+      <image src="../../img/WechatIMG53.png"></image>
+    </view>
+
+    <view class="popularContent">
+      <!-- 商品  -->
+      <view wx:for='{{num}}' id='{{item.id}}'>
+        <image class="popularContentImg" src="{{urls}}{{item.images[0]}}" bindtap="productDetails" data-data='{{item}}'></image>
+        <view class="popularNumber" bindtap="productDetails" data-data='{{item}}'>{{item.name}}</view>
+        <view>
+          <view class="popularDetails">
+            <text>¥{{item.price}}</text>
+            <text wx:if='{{item.switch_score == 0 }}'>{{item.score}}积分</text>
+            <image src="../../img/WechatIMG439.png" bindtap="shopClick"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+
+</view>

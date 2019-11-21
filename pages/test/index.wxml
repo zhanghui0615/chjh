@@ -1,0 +1,74 @@
+<view class="test">
+<image class="backgroung" src="../../img/WechatIMG89.png"></image>
+  <!-- 主要事项按钮 -->
+  <view class="notice" bindtap="showBtn">
+    <image src="../../img/851571647370_.pic_hd.jpg"></image>
+    <text>注意事项</text>
+  </view>
+  <!-- 标题 -->
+  <view class='testTitle'>
+    性格测试
+  </view>
+  <!-- 测试 -- 图片 -->
+  <view class="testImg">
+  </view>
+  <!-- 测试按钮 -->
+  <view class="testBtn">
+    <view bindtap="startTest">
+      <image src="../../img/csIconBtn.png"></image>
+      <text>开始测试</text>
+    </view>
+    <view bindtap="yq">邀请好友</view>
+  </view>
+  <!-- 注意事项打开后的页面 -->
+  <view class="popUps" wx:if='{{show}}'>
+    <!-- 注意事项内容 -->
+    <view class="popUpsContent">
+      <view class="popUpsContentText">
+        <view class="popsdasd">
+          <view class="popImgs"><image src="../../img/xinggeImg.png"></image></view>
+          <view class="popUpsContentTextTitle">注意事项</view>
+          <view class="popUpsContentTexts">注意事项内容注意事项内容注意事项内容注意事项内容注意事项内容注意事项内容注意事项内容注意事项内容</view>
+        </view>
+        <view class="popTishi">
+          提示：请关注你自己的内心世界而非你的工作状态。
+        </view>
+      </view>
+      <!-- 注意事项关闭按钮 -->
+      <view class="popUpsBtn" bindtap="showBtn">
+        <image src="../../img/841571647364_.pic_hd.jpg"></image>
+      </view>
+    </view>
+  </view>
+  <!-- 邀请好友 -->
+  <view class="popUps" wx:if='{{showhy}}'>
+    <!-- 注意事项内容 -->
+    <view class="popUpsContent" style="margin-top:10px;">
+      <view class="popUpsContentTextes">
+        <view class="popUpsContentTextTitlees" style="border:0;margin:40px 0;font-size:18px;">邀请好友</view>
+        <view class='popUpsContentTextForm'>
+          <view>
+            <text>姓名</text>
+            <input placeholder="请输入手机号"></input>
+          </view>
+          <view>
+            <text>手机号</text>
+            <input placeholder="请输入验证码"></input>
+          </view>
+        </view>
+        <view class="fasongBtn">发送</view>
+      </view> 
+      <!-- 注意事项关闭按钮 -->
+      <view class="popUpsBtn" bindtap="yq">
+        <image src="../../img/841571647364_.pic_hd.jpg"></image>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- <button bindtap="jia">+</button>
+<button bindtap="jian">-</button>
+<view class="cs">
+  <view class="css" style="width:{{width}}%">
+  </view>
+  {{nums}}/{{num}}
+</view> -->
